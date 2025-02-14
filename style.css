@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    background-color: #ffe6e6;
+    font-family: 'Pacifico', cursive;
+    text-align: center;
+    animation: fadeIn 2s ease-in-out;
+    position: relative;
+    margin: 0;
+}
+h1, .buttons {
+    animation: floatUpDown 3s infinite alternate ease-in-out, heartbeat 1.5s infinite;
+    position: relative;
+    z-index: 2;
+    transition: transform 0.3s ease-in-out;
+}
+h1 {
+    color: #ff4d4d;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 5px rgba(255, 0, 0, 0.3);
+}
+.buttons {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.btn {
+    font-size: 1.5em;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+}
+.yes {
+    background-color: #ff4d4d;
+    color: white;
+}
+.yes:hover {
+    background-color: #ff1a1a;
+    transform: scale(1.1);
+}
+.no {
+    background-color: #999;
+    color: white;
+    position: relative;
+    transition: all 0.3s ease;
+}
+@keyframes heartbeat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+@keyframes glitter {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    100% { opacity: 1; }
+}
+.glitter {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: rgb(255, 0, 0);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: glitter 1.5s infinite alternate;
+    z-index: 1;
+}
